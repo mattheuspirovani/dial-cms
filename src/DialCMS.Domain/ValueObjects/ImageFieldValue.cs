@@ -1,6 +1,8 @@
+using DialCMS.Domain.Core;
+
 namespace DialCMS.Domain.ValueObjects;
 
-public class ImageFieldValue
+public class ImageFieldValue: ValueObject
 {
     public string Url { get; private set; }
     public int Width { get; private set; }

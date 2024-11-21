@@ -12,7 +12,7 @@ public class DataType
     public static readonly DataType String = new("String");
     public static readonly DataType Decimal = new("Decimal");
     public static readonly DataType DateTime = new("DateTime");
-    public static readonly DataType Int = new("Int");
+    public static readonly DataType Integer = new("Int");
     public static readonly DataType Boolean = new("Boolean");
     public static readonly DataType Money = new("Money");
     public static readonly DataType Image = new("Image");
@@ -23,12 +23,8 @@ public class DataType
         switch (Name)
         {
             case "String":
-                if (value is not TextFieldValue)
+                if (value is not StringFieldValue)
                     throw new ArgumentException($"Expected TextFieldValue, got {value?.GetType().Name}");
-                break;
-            case "Decimal":
-                if (value is not MoneyFieldValue)
-                    throw new ArgumentException($"Expected MoneyFieldValue, got {value?.GetType().Name}");
                 break;
             case "DateTime":
                 if (value is not DateFieldValue)

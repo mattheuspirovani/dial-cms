@@ -1,6 +1,8 @@
+using DialCMS.Domain.Core;
+
 namespace DialCMS.Domain.ValueObjects;
 
-public class MoneyFieldValue
+public class MoneyFieldValue: ValueObject
 {
     public decimal Amount { get; private set; }
     public string Currency { get; private set; }

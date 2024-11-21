@@ -1,6 +1,8 @@
+using DialCMS.Domain.Core;
+
 namespace DialCMS.Domain.ValueObjects;
 
-public class DateFieldValue
+public class DateFieldValue: ValueObject
 {
     public DateTime Value { get; private set; }
 

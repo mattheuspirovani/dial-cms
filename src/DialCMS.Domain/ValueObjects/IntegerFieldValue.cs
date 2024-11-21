@@ -1,6 +1,8 @@
+using DialCMS.Domain.Core;
+
 namespace DialCMS.Domain.ValueObjects;
 
-public class IntegerFieldValue
+public class IntegerFieldValue: ValueObject
 {
     public int Value { get; private set; }
 

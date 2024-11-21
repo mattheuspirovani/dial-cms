@@ -1,6 +1,8 @@
+using DialCMS.Domain.Core;
+
 namespace DialCMS.Domain.ValueObjects;
 
-public class BooleanFieldValue
+public class BooleanFieldValue: ValueObject
 {
     public bool Value { get; private set; }
 

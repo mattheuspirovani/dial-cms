@@ -1,6 +1,8 @@
+using DialCMS.Domain.Core;
+
 namespace DialCMS.Domain.ValueObjects;
 
-public class ImageGalleryFieldValue
+public class ImageGalleryFieldValue: ValueObject
 {
     private readonly List<ImageFieldValue> _images;
     public IReadOnlyCollection<ImageFieldValue> Images => _images.AsReadOnly();
