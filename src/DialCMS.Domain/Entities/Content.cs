@@ -17,11 +17,10 @@ public class Content
 
         ContentTypeId = contentType.Id;
 
-        // Copiar os campos do ContentType para o Content
         foreach (var field in contentType.Fields)
         {
             _fields.Add(new Field(field.Name, field.DataType));
-            _values[field.Name] = null; // Inicializar valores com null
+            _values[field.Name] = null; 
         }
     }
 
@@ -31,10 +30,8 @@ public class Content
         if (field == null)
             throw new ArgumentException($"Field '{fieldName}' does not exist.");
 
-        // Validar o valor com base no DataType
         field.DataType.Validate(value);
 
-        // Atribuir o valor
         _values[fieldName] = value;
     }
 
