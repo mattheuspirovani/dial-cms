@@ -10,8 +10,8 @@ public class InMemoryContentRepository: InMemoryRepository<Content>, IContentRep
         return Find(content => content.Status == status);
     }
 
-    public IEnumerable<Content> GetByContentType(Guid contentTypeId)
+    public IEnumerable<Content> GetByContentType(Guid templateId)
     {
-        return Find(content => content.ContentTypeId == contentTypeId);
+        return Find(content => content.TemplateId == templateId);
     }
 }

@@ -1,5 +1,4 @@
 using System.Reflection;
-using DialCMS.Application.Services;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,8 +14,6 @@ public static class DependencyInjection
         // Register FluentValidation
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         
-        services.AddTransient<ContentValueUpdater>(); 
-
         return services;
     }
 }

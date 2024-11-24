@@ -1,7 +1,6 @@
 using DialCMS.Application.Commands.CreateContent;
 using DialCMS.Application.Queries.GetContentById;
 using DialCMS.API.Extensions;
-using DialCMS.Application.Commands.UpdateContentValues;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,20 +35,5 @@ public class ContentController(IMediator mediator) : ControllerBase
         );
     }
     
-    [HttpPatch("{id:guid}/values")]
-    public async Task<IActionResult> UpdateValues(Guid id, [FromBody] Dictionary<string, Dictionary<string, object>> values)
-    {
-        var command = new UpdateContentValuesCommand
-        {
-            ContentId = id,
-            Values = values
-        };
-
-        var result = await _mediator.Send(command);
-
-        return result.Match(
-            success => NoContent(),
-            this.Problem
-        );
-    }
+    
 }
