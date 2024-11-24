@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialCMS.Infrastructure", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialCMS.API", "src\DialCMS.API\DialCMS.API.csproj", "{394E56D1-D64D-4C95-859F-AA9B619693FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialCMS.Tests", "tests\DialCMS.Tests\DialCMS.Tests.csproj", "{1A2B91DA-B6B4-4426-B80F-EAEE8A8F0011}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{394E56D1-D64D-4C95-859F-AA9B619693FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{394E56D1-D64D-4C95-859F-AA9B619693FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{394E56D1-D64D-4C95-859F-AA9B619693FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2B91DA-B6B4-4426-B80F-EAEE8A8F0011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2B91DA-B6B4-4426-B80F-EAEE8A8F0011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2B91DA-B6B4-4426-B80F-EAEE8A8F0011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2B91DA-B6B4-4426-B80F-EAEE8A8F0011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F7D176F4-5E60-464F-84A9-7674F894EB3F} = {271FFDE9-EA47-4525-AE51-DF70F151E883}
