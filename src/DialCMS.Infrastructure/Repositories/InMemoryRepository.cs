@@ -30,4 +30,9 @@ public class InMemoryRepository<T> : IRepository<T> where T : class
     {
         return _storage.AsQueryable().Where(predicate).ToList();
     }
+    
+    public IEnumerable<T> GetAll()
+    {
+        return _storage.ToList();
+    }
 }

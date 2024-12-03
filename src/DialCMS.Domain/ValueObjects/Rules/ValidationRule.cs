@@ -1,6 +1,6 @@
-namespace DialCMS.Domain.ValueObjects;
+namespace DialCMS.Domain.ValueObjects.Rules;
 
-public abstract class ValidationRule
+public class ValidationRule
 {
     public bool IsRequired { get; set; }
 }

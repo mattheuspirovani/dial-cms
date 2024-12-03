@@ -1,6 +1,8 @@
 using System.Reflection;
-using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using FluentValidation;
+using MediatR;
+using DialCMS.Application.Behaviours;
 
 namespace DialCMS.Application;
 
@@ -10,7 +12,8 @@ public static class DependencyInjection
     {
         // Register MediatR
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly));
-
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
         // Register FluentValidation
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         

@@ -10,7 +10,7 @@ public static class DependencyInjection
     {
         // Register Repositories
         services.AddSingleton<IContentRepository, InMemoryContentRepository>();
-
+        services.AddSingleton<ITemplateRepository, InMemoryTemplateRepository>();
         return services;
     }
 }
