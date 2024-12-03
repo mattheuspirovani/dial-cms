@@ -54,7 +54,7 @@ public class ContentFieldJsonConverter : JsonConverter<ContentField>
         writer.WriteEndObject();
     }
 
-    private object DeserializeValueBasedOnType(JsonElement valueElement, FieldType fieldType)
+    private object? DeserializeValueBasedOnType(JsonElement valueElement, FieldType fieldType)
     {
         switch (fieldType)
         {

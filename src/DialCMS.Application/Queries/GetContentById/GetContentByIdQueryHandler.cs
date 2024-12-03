@@ -5,7 +5,7 @@ using ErrorOr;
 
 namespace DialCMS.Application.Queries.GetContentById;
 
-public class GetContentByIdQueryHandler: IRequestHandler<GetContentByIdQuery, ErrorOr<Content>>
+public class GetContentByIdQueryHandler : IRequestHandler<GetContentByIdQuery, ErrorOr<Content>>
 {
     private readonly IContentRepository _contentRepository;
 

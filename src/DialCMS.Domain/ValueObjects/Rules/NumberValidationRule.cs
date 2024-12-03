@@ -1,3 +1,5 @@
+using DialCMS.Domain.ValueObjects.Rules;
+
 namespace DialCMS.Domain.ValueObjects;
 
 public class NumberValidationRule : ValidationRule
