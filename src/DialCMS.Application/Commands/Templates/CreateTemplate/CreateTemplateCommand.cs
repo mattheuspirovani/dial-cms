@@ -1,7 +1,7 @@
 using DialCMS.Domain.Entities;
-using MediatR;
 using ErrorOr;
+using MediatR;
 
-namespace DialCMS.Application.Commands.CreateTemplate;
+namespace DialCMS.Application.Commands.Templates.CreateTemplate;
 
 public record CreateTemplateCommand(Template Template) : IRequest<ErrorOr<Guid>>;

@@ -1,9 +1,8 @@
-using DialCMS.Domain.Entities;
 using DialCMS.Domain.Repositories;
-using MediatR;
 using ErrorOr;
+using MediatR;
 
-namespace DialCMS.Application.Commands.CreateContent;
+namespace DialCMS.Application.Commands.Contents.CreateContent;
 
 public class CreateContentCommandHandler: IRequestHandler<CreateContentCommand, ErrorOr<Guid>>
 {

@@ -17,13 +17,13 @@ public class InMemoryRepository<T> : IRepository<T> where T : class
 
     public void Remove(T entity) => _storage.Remove(entity);
 
-    public T? GetById(Guid id)
+    public Task<T?> GetById(Guid id)
     {
         var property = typeof(T).GetProperty("Id");
         if (property == null)
             throw new InvalidOperationException("Entity does not have an Id property.");
 
-        return _storage.FirstOrDefault(e => (Guid)property.GetValue(e, null)! == id);
+        return Task.FromResult(_storage.FirstOrDefault(e => (Guid)property.GetValue(e)! == id));
     }
     
     public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
