@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace DialCMS.Application.Commands.CreateContent;
+namespace DialCMS.Application.Commands.Contents.CreateContent;
 
 public class CreateContentCommandValidator: AbstractValidator<CreateContentCommand>
 {

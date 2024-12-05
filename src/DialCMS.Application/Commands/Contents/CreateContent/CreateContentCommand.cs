@@ -1,7 +1,7 @@
-using MediatR;
 using ErrorOr;
+using MediatR;
 
-namespace DialCMS.Application.Commands.CreateContent;
+namespace DialCMS.Application.Commands.Contents.CreateContent;
 
 public class CreateContentCommand : IRequest<ErrorOr<Guid>>
 {
