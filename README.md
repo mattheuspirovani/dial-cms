@@ -2,15 +2,6 @@
 
 **Dial CMS** is a headless CMS built with **C#** and based on **DDD** (Domain-Driven Design) principles. The goal is to provide a flexible and extensible content management solution for modern applications.
 
-## Table of Contents
-
-- [Features](#features)
-- [Architecture](#architecture)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Features
 
 - **Headless Architecture**: Decouple content management from presentation.
